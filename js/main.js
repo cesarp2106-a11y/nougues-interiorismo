@@ -95,10 +95,13 @@ const CONFIG = {
   }
 
   /* Instagram (solo si está configurado) */
-  const ig = document.getElementById("igLink");
-  if (ig && CONFIG.INSTAGRAM) {
-    ig.href = CONFIG.INSTAGRAM;
-    ig.hidden = false;
+  if (CONFIG.INSTAGRAM) {
+    const handle = "@" + CONFIG.INSTAGRAM.replace(/\/+$/, "").split("/").pop();
+    document.querySelectorAll("[data-ig]").forEach((el) => {
+      if (el.tagName === "A") el.href = CONFIG.INSTAGRAM;
+      if (el.hasAttribute("data-ig-handle")) el.textContent = handle;
+      el.hidden = false;
+    });
   }
 
   /* Formulario → WhatsApp */
