@@ -5,8 +5,8 @@
    INSTAGRAM: URL completa del perfil. Ejemplo: "https://instagram.com/usuario"
    ============================================================ */
 const CONFIG = {
-  WHATSAPP: "",
-  INSTAGRAM: ""
+  WHATSAPP: "5493816588767",
+  INSTAGRAM: "https://instagram.com/nouguesinteriorismo"
 };
 
 (function () {
